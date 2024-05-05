@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on win32)" generated="20240505 17:54:52.599" rpa="false" schemaversion="3">
+<suite id="s1" name="login Fail Tests" source="C:\Users\SAMUDITH NANAYAKKARA\Project\BookStackRobotFrameworkTestAutomation\tests\login_Fail_Tests.robot">
+<kw name="Open Browser To BookStack Home" library="browser_management" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.bookstackapp.com/login</arg>
+<arg>browser=chrome</arg>
+<arg>executable_path=${CHROMEDRIVER_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240505 17:54:52.986" level="INFO">Opening browser 'chrome' to base url 'https://demo.bookstackapp.com/login'.</msg>
+<status status="PASS" starttime="20240505 17:54:52.985" endtime="20240505 17:54:55.994"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240505 17:54:55.995" endtime="20240505 17:54:56.309"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20240505 17:54:56.309" endtime="20240505 17:54:56.310"/>
+</kw>
+<status status="PASS" starttime="20240505 17:54:52.985" endtime="20240505 17:54:56.311"/>
+</kw>
+<test id="s1-t1" name="Invalid Login" line="11">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>wrong@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240505 17:54:56.316" level="INFO">Typing text 'wrong@example.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240505 17:54:56.314" endtime="20240505 17:54:58.126"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>wrongpassword</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240505 17:54:58.128" level="INFO">Typing text 'wrongpassword' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240505 17:54:58.127" endtime="20240505 17:54:59.860"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(),'Log In')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240505 17:54:59.861" level="INFO">Clicking button 'xpath=//button[contains(text(),'Log In')]'.</msg>
+<status status="PASS" starttime="20240505 17:54:59.861" endtime="20240505 17:55:03.005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//div[contains(text(),'These credentials do not match our records.')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240505 17:55:03.006" endtime="20240505 17:55:04.064"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>These credentials do not match our records.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240505 17:55:05.113" level="INFO">Current page contains text 'These credentials do not match our records.'.</msg>
+<status status="PASS" starttime="20240505 17:55:04.066" endtime="20240505 17:55:05.113"/>
+</kw>
+<status status="PASS" starttime="20240505 17:54:56.311" endtime="20240505 17:55:05.122"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240505 17:55:05.127" endtime="20240505 17:55:08.334"/>
+</kw>
+<status status="PASS" starttime="20240505 17:54:52.601" endtime="20240505 17:55:08.334"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="login Fail Tests">login Fail Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
