@@ -20,7 +20,7 @@ pip install robotframework-requests <br />
 
 1. Verify suceessfull login to Book Stack application- <b> robot -d results tests/login_Success_Tests.robot </b> <br />
 2. Verify unsuceessfull login to Book Stack application- <b>robot -d results tests/login_Fail_Tests.robot</b> <br />
-3. Verify user ability to 'Create New Book'- <b>robot -d results tests/create_book_test.robot<b> </br />
+3. Verify user ability to 'Create New Book'- <b>robot -d results tests/create_book_test.robot<b>
 
 ## Demostration of test execution
 
